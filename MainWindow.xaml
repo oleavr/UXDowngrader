@@ -1,0 +1,10 @@
+﻿<Window x:Class="UXDowngrader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="UX Downgrader" Height="100" Width="228" xmlns:my="clr-namespace:UXDowngrader" MinHeight="100" MinWidth="228" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="72" Margin="0,0,-0.333,0">
+        <my:ProcessPicker x:Name="processPicker" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Height="50" Margin="12,12,0,0" />
+        <TextBox Height="23" Margin="68,12,66,0" Name="pidTextBox" VerticalAlignment="Top" Text="{Binding ElementName=processPicker, Path=SelectedProcess.Id, Mode=OneWay}" />
+        <Button Content="Go" Margin="0,12,12,0" Name="goButton" Height="23" VerticalAlignment="Top" Click="goButton_Click" HorizontalAlignment="Right" Width="48" />
+    </Grid>
+</Window>
